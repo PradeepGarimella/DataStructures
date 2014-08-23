@@ -1,0 +1,13 @@
+package GraphPackage;
+
+import GraphPackage.Interfaces.VertexInterface;
+
+public class Edge {
+	private VertexInterface<T> endVertex;
+	private double cost;
+	
+	protected Edge(VertexInterface<T> endVertext) {
+		this.endVertex=endVertex;
+	}
+
+}

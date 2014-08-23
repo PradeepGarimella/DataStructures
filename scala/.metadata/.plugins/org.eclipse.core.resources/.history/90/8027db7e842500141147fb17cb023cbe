@@ -1,0 +1,19 @@
+package GraphPackage.Interfaces;
+
+import java.util.Iterator;
+
+public interface VertexInterface<T> {
+	public T getLabel();
+	public void visit();
+	public void unvisit();
+	public boolean isVisited();
+	public boolean connect(VertexInterface<T> endVertex, double edgeWeight);
+	public boolean connect(VertexInterface<T> endVertex);
+	public Iterator<VertexInterface<T>> getNeighbourIterator();
+	public Iterator<Double> getWeightIterator();
+	public boolean hasNeighbor();
+	public VertexInterface<T>
+
+	
+
+}

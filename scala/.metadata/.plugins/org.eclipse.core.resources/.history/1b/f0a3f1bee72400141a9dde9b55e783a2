@@ -1,0 +1,13 @@
+
+public class StringReverse {
+	
+	
+	public char[] reverseString(char[] arr, int pos,int len) {
+		if(pos<len) {
+			
+			reverseString(arr,pos++);
+		}
+		
+	}
+
+}

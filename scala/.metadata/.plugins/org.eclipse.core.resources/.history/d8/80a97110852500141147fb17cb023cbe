@@ -1,0 +1,9 @@
+package GraphPackage;
+
+import GraphPackage.Interfaces.VertexInterface;
+
+public class Edge<T> {
+	private VertexInterface<T> endVertex;
+	private double cost;
+
+}

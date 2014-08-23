@@ -1,0 +1,152 @@
+package GraphPackage;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+import GraphPackage.Interfaces.VertexInterface;
+
+public class Vertex<T> implements VertexInterface<T> {
+	
+	private T label;
+	private LinkedList<Edge> edgeList;
+	private boolean visited;
+	private VertexInterface<T> predecessorVertex;
+	private double cost;
+	
+	public Vertex(T vertextLabel) {
+		this.label=vertextLabel;
+		predecessorVertex=null;
+		visited = false;
+		edgeList = new LinkedList<Edge>();
+		
+	}
+
+	@Override
+	public T getLabel() {
+		return label;
+	}
+
+	@Override
+	public void visit() {
+		visited=true;
+	}
+
+	@Override
+	public void unvisit() {
+		visited = false;
+	}
+
+	@Override
+	public boolean isVisited() {
+		return visited;
+	}
+
+	@Override
+	public boolean connect(VertexInterface<T> endVertex, double edgeWeight) {
+		if(this.equals(obj))
+		
+	}
+
+	@Override
+	public boolean connect(VertexInterface<T> endVertex) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Iterator<VertexInterface<T>> getNeighbourIterator() {
+		return new NeighbourIterator();
+	}
+
+	@Override
+	public Iterator<Double> getWeightIterator() {
+		return null;
+	}
+
+	@Override
+	public boolean hasNeighbor() {
+		return edgeList.isEmpty();
+	}
+
+	@Override
+	public VertexInterface<T> getUnvisitedNeighbour() {
+		return null;
+	}
+
+	@Override
+	public void setPredecessor(VertexInterface<T> predecessor) {
+		this.predecessorVertex=predecessor;
+	}
+
+	@Override
+	public VertexInterface<T> getPredecessor() {
+		// TODO Auto-generated method stub
+		return predecessorVertex;
+	}
+
+	@Override
+	public boolean hasPredecessor() {
+		// TODO Auto-generated method stub
+		return predecessorVertex!=null;
+	}
+
+	@Override
+	public void setCost(double newCost) {
+		this.cost=newCost;
+	}
+
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return cost;
+	}
+	
+	@Override
+	public boolean equals(Object other) {
+		boolean result;
+		if(other==null||this.getClass()!=other.getClass()) {
+			
+		}
+		
+	}
+	
+	private class Edge {
+		private VertexInterface<T> endVertex;
+		private double cost;
+		
+		protected Edge(VertexInterface<T> endVertext) {
+			this.endVertex=endVertex;
+		}
+
+	}
+	
+	
+	private class NeighbourIterator implements Iterator<VertexInterface<T>> {
+		private Iterator<Edge> edges;
+		private NeighbourIterator() {
+			this.edges=edgeList.iterator();
+		}
+
+		@Override
+		public boolean hasNext() {
+			return edges.hasNext();
+		}
+
+		@Override
+		public VertexInterface<T> next() {
+			VertexInterface<T> next = null;
+			if(edges.hasNext()) {
+				Edge edgeToNextNeighbour = edges.next();
+				next = edgeToNextNeighbour.endVertex;
+			}
+			return next;
+		}
+
+		@Override
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
+		
+	}
+
+}

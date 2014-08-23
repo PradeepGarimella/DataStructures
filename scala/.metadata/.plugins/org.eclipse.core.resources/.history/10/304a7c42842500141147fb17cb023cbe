@@ -1,0 +1,11 @@
+package GraphPackage.Interfaces;
+
+public interface VertexInterface<T> {
+	public T getLabel();
+	public void visit();
+	public void unvisit();
+	public boolean isVisited();
+	public boolean connect(VertexInterface<T> endVertex, double edgeWeight);
+	
+
+}

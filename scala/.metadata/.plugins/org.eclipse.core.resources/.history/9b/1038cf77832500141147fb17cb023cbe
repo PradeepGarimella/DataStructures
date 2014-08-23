@@ -1,0 +1,6 @@
+package GraphPackage;
+import java.util.Queue;
+public interface GraphAlgorithmInteface<T> {
+	public Queue<T> getBreadthFirstTraversal();
+
+}

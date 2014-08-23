@@ -1,0 +1,17 @@
+
+public class StringReverse {
+	
+	
+	public char[] reverseString(char[] arr, int pos,int len) {
+		if(pos==len-1) {
+			return new char[]{arr[len]};
+		}
+		else {
+			char [] retArr = reverseString(arr,pos++,len);
+			char[] tempArr = new char[retArr.length+1];
+		   
+		}
+		
+	}
+
+}
