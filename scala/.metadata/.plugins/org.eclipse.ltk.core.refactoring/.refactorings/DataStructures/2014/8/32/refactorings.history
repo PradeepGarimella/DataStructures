@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;DataStructures/src/LinkedList.scala&apos; to &apos;List.scala&apos;" description="Rename resource &apos;LinkedList.scala&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/LinkedList.scala" name="List.scala" stamp="1407124928241" updateReferences="true"/>
-</session>

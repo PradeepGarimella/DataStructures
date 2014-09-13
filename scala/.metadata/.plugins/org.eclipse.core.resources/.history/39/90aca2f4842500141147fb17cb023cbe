@@ -1,8 +1,0 @@
-package GraphPackage;
-
-import GraphPackage.Interfaces.VertexInterface;
-
-public class Edg<T> {
-	private VertexInterface<T> endVertext;
-
-}

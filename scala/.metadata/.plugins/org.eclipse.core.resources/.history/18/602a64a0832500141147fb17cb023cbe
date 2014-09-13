@@ -1,9 +1,0 @@
-package GraphPackage;
-import java.util.Queue;
-import java.util.Stack;
-public interface GraphAlgorithmInteface<T> {
-	public Queue<T> getBreadthFirstTraversal(T origin);
-	public Queue<T> getDepthFirstTraversal(T origin);
-	public Stack<T> getTopologicalOrder();
-
-}

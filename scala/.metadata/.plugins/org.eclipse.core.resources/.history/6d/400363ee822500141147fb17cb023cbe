@@ -1,6 +1,0 @@
-package GraphPackage;
-
-public interface BasicGraphInterface<T> {
-	public boolean addVertex(T vertexLabel);
-
-}
