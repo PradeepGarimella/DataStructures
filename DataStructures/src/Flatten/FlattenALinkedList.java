@@ -1,5 +1,10 @@
 package Flatten;
 import java.util.Queue;
+/**
+ * Flatten a linked list;
+ * @author garimell
+ *
+ */
 public class FlattenALinkedList {
 	
 	public Node newNode(Node next, Node child, Integer value) {
